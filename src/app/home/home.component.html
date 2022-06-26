@@ -1,0 +1,18 @@
+<p>
+  home works!
+</p>
+
+
+<!-- property binding-->
+<input [value]="aboutChicken" />
+<input id="input2" value="hello" [required]="myBoolean" />
+
+
+<!-- event binding -->
+<button (click)="alertMe('hello there')"> Click here </button>
+
+<!-- two way data binding -->
+<input [(ngModel)]="object.name" />
+<input [(ngModel)]="object.age" />
+<p>{{object.name}}</p>
+<p>{{object.age}}</p>
