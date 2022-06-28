@@ -10,9 +10,24 @@
 
 <!-- event binding -->
 <button (click)="alertMe('hello there')"> Click here </button>
-
+<p></p>
 <!-- two way data binding -->
+<label>Name:</label>
+<input [(ngModel)]="person.name" />
+<label>Age:</label>
+<input [(ngModel)]="person.age" />
+<p>{{person.name}}</p>
+<p>{{person.age}}</p>
+
+<!-- @Input & custom property binding -->
+<label>Name:</label>
 <input [(ngModel)]="object.name" />
+<label>Age:</label>
 <input [(ngModel)]="object.age" />
 <p>{{object.name}}</p>
 <p>{{object.age}}</p>
+
+
+<!-- @Output & custom property binding -->
+
+<button (click)="fireYellEvent($event)">hit me</button>

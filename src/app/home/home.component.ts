@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+// import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-home',
@@ -9,14 +10,23 @@ export class HomeComponent implements OnInit {
 
   aboutChicken = 'I love chicken';
   myBoolean = true;
+  
+  @Input() object;
+  @Output() onYell = new EventEmitter();
 
-  object = {
-    name:'ali',
-    age:30
+  person = {
+    name:'Ali',
+    profession:'software engineer'
   }
+
   alertMe(text){
     alert(text);
   }
+
+  fireYellEvent(e){
+    this.onYell.emit(e);
+  }
+
   constructor() { }
 
   ngOnInit() {

@@ -2,5 +2,8 @@
   {{title}}
 </h1>
 <P>World</P>
+<section>
+<app-home [object]="object" (onYell)="yell($event)">hello there!</app-home>
+</section>
 
-<app-home></app-home>
+<router-outlet></router-outlet>
